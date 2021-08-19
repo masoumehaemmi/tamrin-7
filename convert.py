@@ -1,4 +1,5 @@
 from moviepy import editor
 
-video = editor.videoFileClip("karimi1400.mp4")
-video.audio.write_audiofile("karimi1400.mp4")
+video = editor.VideoFileClip("karimi1400.mp4")
+audio = video.audio
+audio.write_audiofile("karimi1400.mp3")
