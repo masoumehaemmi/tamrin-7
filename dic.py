@@ -1,5 +1,4 @@
-
-def load():
+try:
     my_file=open("translate.txt" , "r")
     my_dict=my_file.read().split("\n")
 
@@ -8,6 +7,8 @@ def load():
             #print([my_dict])
 
     print("Welcome to the translation program YASAMINJOON")
+except:
+    print([my_dict])
 
 def show_menu():
     print("1- add new word")
@@ -16,7 +17,6 @@ def show_menu():
     print("4- show_menu ")
     print("5- exit")
     
-
 my_dict=[]
 
 def add_new_word():
@@ -35,15 +35,14 @@ def translation_english2persian():
     perword = sentence.split( )
 
     for i in range(len(my_dict)):
-        for j in range (len(perword)):
+        for j in range (len(my_dict)):
             if perword[i] == my_dict[j]["wordpersian"]:
                 #j=j+1
                 print(my_dict[j]["wordenglish"] , end=" ")
-                
+                break
             else:
              print(perword )
                 
-
 def translation_persian2english():
     sentece = input("enter your sentence : ")
     engword = sentece.split( )
@@ -56,8 +55,6 @@ def translation_persian2english():
                 print(engword)
         
 
-
-load()
 
 while True:
     show_menu()
