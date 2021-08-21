@@ -5,7 +5,7 @@ def load():
 
     for i in range(0,len(my_dict),2):
             my_dict.append({"wordenglish":my_dict[i], "wordpersian" : my_dict[i+1]})
-            print([my_dict])
+            #print([my_dict])
 
     print("Welcome to the translation program YASAMINJOON")
 
