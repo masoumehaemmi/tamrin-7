@@ -56,7 +56,7 @@ def editkala():
                 choice=int(input("choice from edit menu:"))
                 if choice == 1:
                     new_name =input("enter your new name :")
-                    PRODUCTION[i]["name"] == new_name
+                    PRODUCTION[i]["name"]== new_name
                 elif choice == 2:
                     new_price =float(input("enter your new price:"))
                     PRODUCTION[i]["price"] == new_price
@@ -133,16 +133,16 @@ def save_and_exit():
     for i in range(len(PRODUCTION)):
         row = str(PRODUCTION[i]["id"]) + ',' + (PRODUCTION[i]["name"]) + "," + str(PRODUCTION[i]["price"]) + ',' + str(PRODUCTION[i]["count"])
         my_file.write(row)
-        r=+1
+        r=r+1
         if r<len(PRODUCTION):
             my_file.write("\n")
     my_file.close()
     exit()
 
 
-def show_list():
-    for i in range(len(PRODUCTION)):
-        print(PRODUCTION[i] )
+#def show_list():
+#    for i in range(len(PRODUCTION)):
+#        print(PRODUCTION[i] )
 
 def show_menu():
 
