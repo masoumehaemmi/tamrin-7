@@ -9,11 +9,7 @@ def load():
             #print([my_dict])
 
     print("Welcome to the translation program YASAMINJOON")
-
-
         
-
-
 def show_menu():
     print("1- add new word")
     print("2- translation english2persian")
@@ -21,8 +17,6 @@ def show_menu():
     print("4- show_menu ")
     print("5- exit")
     
-
-
 def add_new_word():
     eng=input("enter your word english to add Dictionary :")
     per=input("Enter the meaning of the word : ")
@@ -41,13 +35,12 @@ def translation_persian2englis():
     for i in range(len(my_dict)):
         for j in range (len(perword)):
             if perword[i] == my_dict[j]["wordpersian"]:
-                #j=j+1
                 print(my_dict[j]["wordenglish"] , end=" ")
                 break
             else:
              print(perword )
                 
-def translation_english2persian():
+def translation_english2per():
     sentece = input("enter your sentence : ")
     engword = sentece.split( )
 
@@ -57,9 +50,8 @@ def translation_english2persian():
                 print(my_dict[j]["wordpersian"] , end= " ")
             else:
                 print(engword)
-        
 
-
+load()                        
 while True:
     show_menu()
     choice = input("Choose one of the options : ")
@@ -67,9 +59,9 @@ while True:
     if choice=="1":
         add_new_word()
     elif choice=="2":
-        translation_english2persian()
+        translation_persian2englis()
     elif choice=="3":
-        translation_persian2english()
+        translation_english2per()
     elif choice=="4":
         show_menu()
     elif choice=="5":
